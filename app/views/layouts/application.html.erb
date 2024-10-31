@@ -29,7 +29,6 @@
   </head>
 
   <body>
-    <%= render "shared/flash" %>
     <div class="header-layout">
       <header id="header">
         <div class="container">
@@ -43,6 +42,7 @@
       </header>
 
       <main id="main">
+        <%= render "shared/flash" %>
         <div class="container">
           <%= yield %>
         </div>
