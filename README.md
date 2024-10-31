@@ -1,6 +1,6 @@
 # Rails 8 Demo Repository
 
-Welcome to my Rails 8 demo repository! This project contains practical examples of Rails 8 features that I discuss on my [YouTube Channel](YOUR_YOUTUBE_CHANNEL_LINK).
+Welcome to my Rails 8 demo repository! This project contains practical examples of Rails 8 features that I discuss on my [YouTube Channel](https://www.youtube.com/@railsquest).
 
 ## Current Demos
 
