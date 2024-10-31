@@ -18,14 +18,15 @@ class Demos::RateLimitsController < ApplicationController
     redirect_back_or_to demos_rate_limits_path
   end
 
-  def reset_counter
-    self.count = 0
-  end
+  private
 
-  def count
+  helper_method def count
     session[:count].to_i
   end
-  helper_method :count
+
+  def reset_counter
+    session.delete(:count)
+  end
 
   def count=(value)
     session[:count] = value
