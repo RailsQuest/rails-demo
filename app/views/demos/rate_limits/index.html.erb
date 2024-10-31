@@ -1,11 +1,8 @@
 <h1>Rate Limits Demo</h1>
 
-<% if flash[:notice] %>
-  <%= flash[:notice] %>
-<% end %>
-
+<%= render "shared/flash" %>
 
 <div>
   <p>You have made <%= count %> requests.</p>
-  <%= button_to "Create a new request" %>
+  <%= button_to "Create a new request", nil, class: "btn" %>
 </div>

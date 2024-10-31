@@ -1,0 +1,20 @@
+<% flash.each do |type, message| %>
+<%
+  color = nil
+  image = nil
+  case type.to_s
+  when "notice"
+    color = "colorize-positive"
+    image = "circle-check.svg"
+  when "alert"
+    color = "colorize-negative"
+    image = "circle-x.svg"
+  end
+%>
+  <div popover data-turbo-permanent class="flash" style="--flash-position: 1rem;" data-controller="element-removal" data-action="animationend->element-removal#remove" role="alert">
+    <% if image %>
+      <%= image_tag image, class: color, size: 20, aria: { hidden: true } %>
+    <% end %>
+    <%= tag.span message %>
+  </div>
+<% end %>
