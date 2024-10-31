@@ -19,8 +19,8 @@ This is a lightweight Rails application with minimal dependencies - no database,
 
 1. Clone this repository:
    ```bash
-   git clone [repository-url]
-   cd rails-8-demos
+   git clone https://github.com/railsquest/rails-demo.git
+   cd rails-demo
    ```
 
 2. Install dependencies:
@@ -54,6 +54,7 @@ Never coded before? No problem! Here's what you need to know:
 ## Learn More
 
 - Watch the demos in action on my [YouTube Channel](https://www.youtube.com/@railsquest)
+- Follow me on [X](https://x.com/railsquest)
 - Check out the [Rails Guides](https://guides.rubyonrails.org/) for more about Ruby on Rails
 - Join our community discussions in the YouTube comments
 
