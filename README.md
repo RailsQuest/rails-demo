@@ -55,6 +55,7 @@ Never coded before? No problem! Here's what you need to know:
 
 - Watch the demos in action on my [YouTube Channel](https://www.youtube.com/@railsquest)
 - Follow me on [X](https://x.com/railsquest)
+- Need help? Check out [Rails Quest](https://rails.quest)!
 - Check out the [Rails Guides](https://guides.rubyonrails.org/) for more about Ruby on Rails
 - Join our community discussions in the YouTube comments
 
