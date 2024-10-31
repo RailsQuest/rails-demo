@@ -1,6 +1,7 @@
-<h1>Rate Limits Demo</h1>
+<h1 class="text-3xl">Rate Limits Demo</h1>
 
-<div>
+<div class="card flex flex-col gap">
   <p>You have made <%= count %> requests.</p>
   <%= button_to "Create a new request", nil, class: "btn" %>
+  <%= button_to "Reset counter", nil, class: "btn", params: {reset: true} %>
 </div>

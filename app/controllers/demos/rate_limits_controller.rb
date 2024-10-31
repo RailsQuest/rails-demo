@@ -10,7 +10,11 @@ class Demos::RateLimitsController < ApplicationController
   end
 
   def create
-    self.count += 1
+    if params[:reset]
+      reset_counter
+    else
+      self.count += 1
+    end
     redirect_back_or_to demos_rate_limits_path
   end
 
