@@ -18,11 +18,29 @@
     <link rel="apple-touch-icon" href="/icon.png">
 
     <%# Includes all stylesheet files in app/assets/stylesheets %>
-    <%= stylesheet_link_tag :app, "data-turbo-track": "reload" %>
+    <%= stylesheet_link_tag :app, "data-turbo-track": Rails.env.production? ? "reload" : "" %>
     <%= javascript_importmap_tags %>
+    <%= hotwire_livereload_tags if Rails.env.development? %>
   </head>
 
   <body>
-    <%= yield %>
+    <div class="header-layout">
+      <header id="header">
+        <div class="container">
+          <div class="branding">
+            <a href="/" class="brand">
+              <img src="/icon.svg" alt="Rails Demo" width="32" height="32">
+              Rails Demo
+            </a>
+          </div>
+        </div>
+      </header>
+
+      <main id="main">
+        <div class="container">
+          <%= yield %>
+        </div>
+      </main>
+    </div>
   </body>
 </html>

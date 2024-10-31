@@ -116,12 +116,26 @@ GEM
     erubis (2.7.0)
     et-orbi (1.2.11)
       tzinfo
+    ffi (1.17.0-aarch64-linux-gnu)
+    ffi (1.17.0-aarch64-linux-musl)
+    ffi (1.17.0-arm-linux-gnu)
+    ffi (1.17.0-arm-linux-musl)
+    ffi (1.17.0-arm64-darwin)
+    ffi (1.17.0-x86-linux-gnu)
+    ffi (1.17.0-x86-linux-musl)
+    ffi (1.17.0-x86_64-darwin)
+    ffi (1.17.0-x86_64-linux-gnu)
+    ffi (1.17.0-x86_64-linux-musl)
     flamegraph (0.9.5)
     fugit (1.11.1)
       et-orbi (~> 1, >= 1.2.11)
       raabro (~> 1.4)
     globalid (1.2.1)
       activesupport (>= 6.1)
+    hotwire-livereload (1.4.1)
+      actioncable (>= 6.0.0)
+      listen (>= 3.0.0)
+      railties (>= 6.0.0)
     i18n (1.14.6)
       concurrent-ruby (~> 1.0)
     importmap-rails (2.0.3)
@@ -149,6 +163,9 @@ GEM
       zeitwerk (>= 2.6.18, < 3.0)
     language_server-protocol (3.17.0.3)
     lint_roller (1.1.0)
+    listen (3.9.0)
+      rb-fsevent (~> 0.10, >= 0.10.3)
+      rb-inotify (~> 0.9, >= 0.9.10)
     logger (1.6.1)
     loofah (2.23.1)
       crass (~> 1.0.2)
@@ -263,8 +280,15 @@ GEM
       zeitwerk (~> 2.6)
     rainbow (3.1.1)
     rake (13.2.1)
+    rb-fsevent (0.11.2)
+    rb-inotify (0.11.1)
+      ffi (~> 1.0)
     rdoc (6.7.0)
       psych (>= 4.0.0)
+    redis (5.3.0)
+      redis-client (>= 0.22.0)
+    redis-client (0.22.2)
+      connection_pool
     regexp_parser (2.9.2)
     reline (0.5.10)
       io-console (~> 0.5)
@@ -412,6 +436,7 @@ DEPENDENCIES
   css-zero
   debug
   flamegraph
+  hotwire-livereload (~> 1.4)
   importmap-rails
   jbuilder
   kamal
@@ -423,6 +448,7 @@ DEPENDENCIES
   rails (~> 8.0.0.rc2)
   rails-erd
   rails_best_practices
+  redis
   rubocop-rails-omakase
   selenium-webdriver
   solid_cable
