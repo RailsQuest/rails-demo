@@ -1,7 +1,6 @@
 class Demos::RateLimitsController < ApplicationController
   skip_before_action :authenticate
   rate_limit only: :create, to: 3, within: 3.seconds, with: -> {
-    reset_counter
     flash[:alert] = "You have reached your rate limit"
     redirect_to demos_rate_limits_path
   }

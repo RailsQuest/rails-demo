@@ -11,7 +11,7 @@
     image = "circle-x.svg"
   end
 %>
-  <div popover data-turbo-permanent class="flash" style="--flash-position: 1rem;" data-controller="element-removal" data-action="animationend->element-removal#remove" role="alert">
+  <div popover data-turbo-permanent class="flash" style="--flash-position: 1rem; z-index: 200;" data-controller="element-removal" data-action="animationend->element-removal#remove" role="alert">
     <% if image %>
       <%= image_tag image, class: color, size: 20, aria: { hidden: true } %>
     <% end %>

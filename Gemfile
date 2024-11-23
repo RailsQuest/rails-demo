@@ -53,6 +53,9 @@ end
 
 group :development do
   # Use console on exceptions pages [https://github.com/rails/web-console]
+  gem "standard"
+  gem "rails_best_practices"
+  gem "rails-erd"
   gem "web-console"
   gem "hotwire-livereload", "~> 1.4"
 end
@@ -63,11 +66,6 @@ group :test do
   gem "selenium-webdriver"
 end
 
-group :development do
-  gem "standard"
-  gem "rails_best_practices"
-  gem "rails-erd"
-end
 gem "authentication-zero"
 gem "css-zero"
 gem "rack-mini-profiler"

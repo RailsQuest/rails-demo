@@ -36,6 +36,7 @@ Rails.application.routes.draw do
   # Demos
   resources :demos, only: [:index]
   namespace :demos do
+    resources :css_zero_showcases, only: [:index]
     resources :rate_limits, only: [:index, :create]
   end
 end
