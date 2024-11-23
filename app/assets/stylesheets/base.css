@@ -1,53 +1,46 @@
+@keyframes gradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes glow {
+  0% { text-shadow: 0 0 5px #ff00ff, 0 0 10px #ff00ff; }
+  50% { text-shadow: 0 0 20px #ff00ff, 0 0 30px #ff00ff; }
+  100% { text-shadow: 0 0 5px #ff00ff, 0 0 10px #ff00ff; }
+}
+
 :root {
+  /* Cyberpunk color scheme */
+  --neon-pink: #ff00ff;
+  --neon-blue: #00ffff;
+  --neon-purple: #9d00ff;
+  --neon-yellow: #ffff00;
+  --dark-purple: #1a0b2e;
+  
   /* Abstractions */
-  --color-bg: white;
-  --color-text: black;
-  --color-text-reversed: white;
-  --color-text-subtle: var(--zinc-500);
-  --color-link: var(--blue-700);
-  --color-border-light: var(--zinc-100);
-  --color-border: var(--zinc-200);
-  --color-border-dark: var(--zinc-400);
-  --color-selected: var(--blue-100);
-  --color-selected-dark: var(--blue-300);
+  --color-bg: var(--dark-purple);
+  --color-text: var(--neon-blue);
+  --color-text-reversed: var(--dark-purple);
+  --color-text-subtle: var(--neon-purple);
+  --color-link: var(--neon-pink);
+  --color-border-light: var(--neon-blue);
+  --color-border: var(--neon-purple);
+  --color-border-dark: var(--neon-pink);
+  --color-selected: var(--neon-yellow);
+  --color-selected-dark: var(--neon-purple);
 
   /* Accent colors */
-  --color-primary: var(--zinc-900);
-  --color-secondary: var(--zinc-100);
-  --color-negative: var(--red-600);
-  --color-positive: var(--green-600);
+  --color-primary: var(--neon-pink);
+  --color-secondary: var(--neon-purple);
+  --color-negative: #ff0000;
+  --color-positive: #00ff00;
 
   /* SVG color values */
-  --color-filter-text: invert(0);
-  --color-filter-text-reversed: invert(1);
-  --color-filter-negative: invert(22%) sepia(85%) saturate(1790%) hue-rotate(339deg) brightness(105%) contrast(108%);
-  --color-filter-positive: invert(44%) sepia(89%) saturate(409%) hue-rotate(89deg) brightness(94%) contrast(97%);
-
-  @media (prefers-color-scheme: dark) {
-    /* Abstractions */
-    --color-bg: black;
-    --color-text: white;
-    --color-text-reversed: black;
-    --color-text-subtle: var(--zinc-400);
-    --color-link: var(--sky-400);
-    --color-border-light: var(--zinc-800);
-    --color-border: var(--zinc-800);
-    --color-border-dark: var(--zinc-600);
-    --color-selected: var(--blue-950);
-    --color-selected-dark: var(--blue-800);
-
-    /* Accent colors */
-    --color-primary: var(--zinc-50);
-    --color-secondary: var(--zinc-800);
-    --color-negative: var(--red-400);
-    --color-positive: var(--green-400);
-
-    /* SVG color values */
-    --color-filter-text: invert(1);
-    --color-filter-text-reversed: invert(0);
-    --color-filter-negative: invert(54%) sepia(16%) saturate(2119%) hue-rotate(313deg) brightness(111%) contrast(94%);
-    --color-filter-positive: invert(81%) sepia(23%) saturate(1237%) hue-rotate(80deg) brightness(95%) contrast(83%);
-  }
+  --color-filter-text: brightness(0) saturate(100%) invert(79%) sepia(81%) saturate(7471%) hue-rotate(150deg) brightness(102%) contrast(109%);
+  --color-filter-text-reversed: brightness(0) saturate(100%);
+  --color-filter-negative: brightness(0) saturate(100%) invert(15%) sepia(95%) saturate(7154%) hue-rotate(359deg) brightness(106%) contrast(112%);
+  --color-filter-positive: brightness(0) saturate(100%) invert(72%) sepia(73%) saturate(1552%) hue-rotate(87deg) brightness(119%) contrast(129%);
 }
 
 * {
@@ -59,10 +52,42 @@ html {
 }
 
 body {
-  background-color: var(--color-bg);
+  background: linear-gradient(-45deg, var(--dark-purple), var(--neon-purple), var(--neon-blue), var(--neon-pink));
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
   color: var(--color-text);
   font-synthesis-weight: none;
   text-rendering: optimizeLegibility;
+}
+
+a {
+  transition: all 0.3s ease;
+}
+
+a:hover {
+  color: var(--neon-pink);
+  text-shadow: 0 0 10px var(--neon-pink);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--neon-yellow);
+  animation: glow 2s ease-in-out infinite;
+}
+
+button, 
+input[type="submit"] {
+  background: var(--neon-purple);
+  border: 2px solid var(--neon-pink);
+  color: var(--neon-yellow);
+  transition: all 0.3s ease;
+}
+
+button:hover,
+input[type="submit"]:hover {
+  background: var(--neon-pink);
+  border-color: var(--neon-purple);
+  box-shadow: 0 0 15px var(--neon-pink);
+  transform: scale(1.05);
 }
 
 ::selection {
