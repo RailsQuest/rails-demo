@@ -149,7 +149,7 @@ GEM
     jbuilder (2.13.0)
       actionview (>= 5.0.0)
       activesupport (>= 5.0.0)
-    json (2.7.5)
+    json (2.8.2)
     kamal (2.3.0)
       activesupport (>= 7.0)
       base64 (~> 0.2)
@@ -210,7 +210,7 @@ GEM
       racc (~> 1.4)
     ostruct (0.6.0)
     parallel (1.26.3)
-    parser (3.3.5.1)
+    parser (3.3.6.0)
       ast (~> 2.4.1)
       racc
     propshaft (1.1.0)
@@ -285,16 +285,12 @@ GEM
       ffi (~> 1.0)
     rdoc (6.7.0)
       psych (>= 4.0.0)
-    redis (5.3.0)
-      redis-client (>= 0.22.0)
-    redis-client (0.22.2)
-      connection_pool
     regexp_parser (2.9.2)
     reline (0.5.10)
       io-console (~> 0.5)
     require_all (3.0.0)
     rexml (3.3.9)
-    rubocop (1.66.1)
+    rubocop (1.68.0)
       json (~> 2.3)
       language_server-protocol (>= 3.17.0)
       parallel (~> 1.10)
@@ -304,7 +300,7 @@ GEM
       rubocop-ast (>= 1.32.2, < 2.0)
       ruby-progressbar (~> 1.7)
       unicode-display_width (>= 2.4.0, < 3.0)
-    rubocop-ast (1.33.0)
+    rubocop-ast (1.36.1)
       parser (>= 3.3.1.0)
     rubocop-minitest (0.36.0)
       rubocop (>= 1.61, < 2.0)
@@ -367,10 +363,10 @@ GEM
       net-ssh (>= 2.8.0)
       ostruct
     stackprof (0.2.26)
-    standard (1.41.1)
+    standard (1.42.1)
       language_server-protocol (~> 3.17.0.2)
       lint_roller (~> 1.0)
-      rubocop (~> 1.66.0)
+      rubocop (~> 1.68.0)
       standard-custom (~> 1.0.0)
       standard-performance (~> 1.5)
     standard-custom (1.0.2)
@@ -448,7 +444,6 @@ DEPENDENCIES
   rails (~> 8.0.0.rc2)
   rails-erd
   rails_best_practices
-  redis
   rubocop-rails-omakase
   selenium-webdriver
   solid_cable
