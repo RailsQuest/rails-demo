@@ -57,7 +57,7 @@ group :development do
   gem "rails_best_practices"
   gem "rails-erd"
   gem "web-console"
-  gem "hotwire-livereload", "~> 1.4"
+  gem "hotwire-spark"
 end
 
 group :test do
